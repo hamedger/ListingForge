@@ -1,0 +1,26 @@
+{
+  "name": "listforge-enhance-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Render-ready backend for ListForge photo enhancement",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "firebase-admin": "^13.8.0",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.7.5",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  }
+}

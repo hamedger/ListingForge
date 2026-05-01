@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: listforge-enhance-api
+    env: node
+    rootDir: listforge-enhance-api
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    autoDeploy: true
+    envVars:
+      - key: ENHANCE_PROVIDER
+        value: remove_bg
+      - key: REMOVE_BG_API_BASE_URL
+        value: https://api.remove.bg/v1.0
+      - key: MAX_IMAGE_MB
+        value: "12"
+      - key: REQUEST_TIMEOUT_MS
+        value: "12000"
+      - key: REMOVE_BG_API_KEY
+        sync: false
+      - key: SIGNED_URL_SECRET
+        sync: false
